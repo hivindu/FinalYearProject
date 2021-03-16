@@ -1,0 +1,75 @@
+version: '3.4'
+
+services:
+
+    rmirpdb : 
+        container_name: rmirpdb
+        volumes:
+            - ${WEBAPP_STORAGE_HOME}/site:/data/db
+        ports:
+            - "27017:27017"
+    
+
+    user.api:
+        container_name: "userapi"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - "UserDatabaseSettings:ConnectionString=mongodb://rmirpdb:27017"
+        depends_on:
+            - rmirpdb
+        volumes:
+            - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+            - ${HOME}/.aspnet/https:/root/.aspnet/https/
+        ports:
+            - "8000:80"
+    issue.api:
+        container_name: "issueapi"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - "IssueDatabaseSettings:ConnectionString=mongodb://rmirpdb:27017"
+        depends_on:
+            - rmirpdb
+        volumes:
+            - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+            - ${HOME}/.aspnet/https:/root/.aspnet/https/
+        ports:
+            - "8001:80"
+    approve.api:
+        container_name: "approveapi"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - "ApproveDatabaseSettings:ConnectionString=mongodb://rmirpdb:27017"
+        depends_on:
+            - rmirpdb
+        volumes:
+            - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+            - ${HOME}/.aspnet/https:/root/.aspnet/https/
+        ports:
+            - "8002:80"
+    workassign.api:
+        container_name: "workassignapi"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - "WorkDatabaseSettings:ConnectionString=mongodb://rmirpdb:27017"
+        depends_on:
+            - rmirpdb
+        volumes:
+            - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+            - ${HOME}/.aspnet/https:/root/.aspnet/https/
+        ports:
+            - "8003:80"
+    apigateway:
+        container_name: apigateway
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+        depends_on:
+            - user.api
+            - issue.api
+            - approve.api
+            - workassign.api
+        volumes:
+            - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+            - ${HOME}/.aspnet/https:/root/.aspnet/https/
+        ports:
+            - "7000:80"
+

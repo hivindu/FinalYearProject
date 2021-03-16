@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+    
+    rmirpdb:
+        image: mongo
+
+    user.api:
+        image: ${DOCKER_REGISTRY-}userapi
+        build:
+            context: .
+            dockerfile: src/User/User.API/Dockerfile
+    issue.api:
+        image: ${DOCKER_REGISTRY-}issueapi
+        build:
+            context: .
+            dockerfile: src/Issue/Issue.API/Dockerfile
+    approve.api:
+        image: ${DOCKER_REGISTRY-}approveapi
+        build:
+            context: .
+            dockerfile: src/Approve/Approve.API/Dockerfile
+    workassign.api:
+        image: ${DOCKER_REGISTRY-}workassignapi
+        build:
+            context: .
+            dockerfile: src/Task/WorkAssign.API/Dockerfile
+    apigateway:
+        image: ${DOCKER_REGISTRY-}apigateway
+        build:
+          context: .
+          dockerfile: src/Gateway/APIGateway/Dockerfile

@@ -1,0 +1,224 @@
+{
+  "ReRoutes": [
+    // User API
+    {
+      "DownstreamPathTemplate": "/api/v1/User",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/User",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/User/{id}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/User/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/User/GetUserByNic/{nic}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/User/GetUserByNic/{nic}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/User/GetUserByType/{type}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/User/GetUserByType/{type}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // Issue API
+    {
+      "DownstreamPathTemplate": "/api/v1/Issue",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "issueapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Issue",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Issue/{id}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "issueapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Issue/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Issue/GetIssueByAdminArea/{area}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "issueapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Issue/GetIssueByAdminArea/{area}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Issue/GetIssueByDate/{date}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "issueapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Issue/GetIssueByDate/{date}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Issue/GetIssueByRoad/{road}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "issueapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Issue/GetIssueByRoad/{road}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Issue/GetIssueByType/{type}/{area}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "issueapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Issue/GetIssueByType/{type}/{area}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // Workassign API
+    {
+      "DownstreamPathTemplate": "/api/v1/Work",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "workassignapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Work",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Work/{id}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "workassignapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Work/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Work/GetTaskByDate/{date}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "workassignapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Work/GetTaskByDate/{date}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Work/GetTaskByUserId/{Uid}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "workassignapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Work/GetTaskByUserId/{Uid}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // Approve API
+    {
+      "DownstreamPathTemplate": "/api/v1/Approve",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "approveapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Approve",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Approve/{id}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "approveapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Approve/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Approve/GetApprovalByUserId/{uid}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "approveapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Approve/GetApprovalByUserId/{uid}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Approve/GetApprovalByIds/{uid}/{iid}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "approveapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Approve/GetApprovalByIds/{uid}/{iid}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ]
+}

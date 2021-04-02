@@ -27,7 +27,6 @@ namespace User.API.Data
                     Name = "Hivindu Amaradeva",
                     NIC="992022469v",
                     Password ="h123456",
-                    Type="Citizen",
                     PostalCode = 10230
                },
                new Users()
@@ -35,7 +34,6 @@ namespace User.API.Data
                     Name = "Dasuni Amaradeva",
                     NIC="990622469v",
                     Password ="h123456",
-                    Type="UC",
                     PostalCode = 10230
                },
                new Users()
@@ -43,7 +41,6 @@ namespace User.API.Data
                     Name = "Daksith Amaradeva",
                     NIC="992122469v",
                     Password ="h123456",
-                    Type="RDA",
                     PostalCode = 10240
                },
                new Users()
@@ -51,7 +48,6 @@ namespace User.API.Data
                     Name = "Hansana Amaradeva",
                     NIC="992602469v",
                     Password ="h123456",
-                    Type="Citizen",
                     PostalCode = 10230
                },
            };

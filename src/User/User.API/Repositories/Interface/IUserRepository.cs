@@ -14,8 +14,6 @@ namespace User.API.Repositories
 
         Task<IEnumerable<Users>> GetUserByNic(string nic);
 
-        Task<IEnumerable<Users>> GetUserByType(string type);
-
         Task Create(Users user);
 
         Task<bool> Update(Users user);

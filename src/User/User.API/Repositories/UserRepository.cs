@@ -32,11 +32,6 @@ namespace User.API.Repositories
             return await _context.users.Find<Users>(x => x.NIC == nic).ToListAsync();
         }
 
-        public async Task<IEnumerable<Users>> GetUserByType(string type)
-        {
-            return await _context.users.Find<Users>(x => x.Type == type).ToListAsync();
-        }
-
         public async Task Create(Users user)
         {
             await _context.users.InsertOneAsync(user);

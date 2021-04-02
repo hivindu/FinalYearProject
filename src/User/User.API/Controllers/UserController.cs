@@ -55,15 +55,6 @@ namespace User.API.Controllers
             return Ok(products);
         }
 
-        [Route("[action]/{type}")] // url comes like api/v1/catalog/GetProductByCategory/ we have to pass category name in here
-        [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<Users>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<Users>>> GetUserByType(string type) // route name and pareameter must be same otherwise it won't match the value that we are passing
-        {
-            var products = await _repository.GetUserByType(type);
-            return Ok(products);
-        }
-
         [HttpPost]
         [ProducesResponseType(typeof(Users), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Users>> CreateUser([FromBody] Users user) //we are expecting http request and inside of request we expect product body and .net core will auto convert jason to object

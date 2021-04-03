@@ -11,6 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using UCRDAUsers.API.Data;
+using UCRDAUsers.API.Data.Interface;
+using UCRDAUsers.API.Repository;
+using UCRDAUsers.API.Repository.Interface;
 using UCRDAUsers.API.Settings;
 
 namespace UCRDAUsers.API
@@ -32,6 +36,10 @@ namespace UCRDAUsers.API
             services.Configure<UCRDAUserDatabaseSettings>(Configuration.GetSection(nameof(UCRDAUserDatabaseSettings)));
 
             services.AddSingleton<IUCRDAUserDatabaseSettings>(sp=> sp.GetRequiredService<IOptions<UCRDAUserDatabaseSettings>>().Value);
+
+            services.AddTransient<IUCRDAUserContext,UCRDAUserContext>();
+
+            services.AddTransient<IUCRDAUserRepository, UCRDAUserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

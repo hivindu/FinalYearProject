@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using UCRDAUsers.API.Settings;
 
 namespace UCRDAUsers.API
 {
@@ -26,6 +28,10 @@ namespace UCRDAUsers.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.Configure<UCRDAUserDatabaseSettings>(Configuration.GetSection(nameof(UCRDAUserDatabaseSettings)));
+
+            services.AddSingleton<IUCRDAUserDatabaseSettings>(sp=> sp.GetRequiredService<IOptions<UCRDAUserDatabaseSettings>>().Value);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

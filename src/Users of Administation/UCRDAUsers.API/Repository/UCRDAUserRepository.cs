@@ -1,7 +1,9 @@
-﻿using System;
+﻿using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UCRDAUsers.API.Data.Interface;
 using UCRDAUsers.API.Entities;
 using UCRDAUsers.API.Repository.Interface;
 
@@ -9,34 +11,47 @@ namespace UCRDAUsers.API.Repository
 {
     public class UCRDAUserRepository : IUCRDAUserRepository
     {
-        public Task<IEnumerable<UCRDAUser>> GetUsers()
+        private readonly IUCRDAUserContext _context;
+        public UCRDAUserRepository(IUCRDAUserContext context)
         {
-            throw new NotImplementedException();
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public Task<UCRDAUser> GetUSer(string id)
+        public async Task<IEnumerable<UCRDAUser>> GetUsers()
         {
-            throw new NotImplementedException();
+            return await _context.ucrdausers.Find(p => true).ToListAsync();
         }
 
-        public Task<UCRDAUser> GetUserByCredentials(string nic, string password)
+        public async Task<UCRDAUser> GetUser(string id)
         {
-            throw new NotImplementedException();
+            return await _context.ucrdausers.Find(p => p.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task Create(UCRDAUser user)
+        public async Task<UCRDAUser> GetUserByCredentials(string nic, string password)
         {
-            throw new NotImplementedException();
+            return await _context.ucrdausers.Find(p => p.NIC == nic && p.Password == password).FirstOrDefaultAsync();
         }
 
-        public Task<bool> Update(UCRDAUser user)
+        public async Task Create(UCRDAUser user)
         {
-            throw new NotImplementedException();
+            await _context.ucrdausers.InsertOneAsync(user);
         }
 
-        public Task<bool> Delete(string id)
+        public async Task<bool> Update(UCRDAUser user)
         {
-            throw new NotImplementedException();
+            var result = await _context.ucrdausers.ReplaceOneAsync(p=> p.Id == user.Id, replacement :user);
+
+            return result.IsAcknowledged && result.ModifiedCount > 0;
+        }
+
+        public async Task<bool> Delete(string id)
+        {
+            FilterDefinition<UCRDAUser> filter = Builders<UCRDAUser>.Filter.Eq(p=>p.Id,id);
+
+            DeleteResult deletedResult = await _context.ucrdausers.DeleteOneAsync(filter);
+
+            return deletedResult.IsAcknowledged && deletedResult.DeletedCount > 0;
+
         }
     }
 }

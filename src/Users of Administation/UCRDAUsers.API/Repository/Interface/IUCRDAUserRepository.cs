@@ -10,7 +10,7 @@ namespace UCRDAUsers.API.Repository.Interface
     {
         Task<IEnumerable<UCRDAUser>> GetUsers();
 
-        Task<UCRDAUser> GetUSer(string id);
+        Task<UCRDAUser> GetUser(string id);
 
         Task<UCRDAUser> GetUserByCredentials(string nic,string password);
 

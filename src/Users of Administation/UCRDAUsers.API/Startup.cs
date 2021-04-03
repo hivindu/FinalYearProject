@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 using UCRDAUsers.API.Data;
 using UCRDAUsers.API.Data.Interface;
 using UCRDAUsers.API.Repository;
@@ -40,6 +41,11 @@ namespace UCRDAUsers.API
             services.AddTransient<IUCRDAUserContext,UCRDAUserContext>();
 
             services.AddTransient<IUCRDAUserRepository, UCRDAUserRepository>();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "UC & RDA User API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +66,9 @@ namespace UCRDAUsers.API
             {
                 endpoints.MapControllers();
             });
+
+            app.UseSwagger(); // midleware for using swagers
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "UC & RDA User API v1"); });
         }
     }
 }

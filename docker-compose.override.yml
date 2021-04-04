@@ -85,5 +85,3 @@ services:
             - ${HOME}/.aspnet/https:/root/.aspnet/https/
         ports:
             - "7000:80"
-    
-     

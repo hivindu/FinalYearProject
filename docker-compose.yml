@@ -28,5 +28,10 @@ services:
     apigateway:
         image: ${DOCKER_REGISTRY-}apigateway
         build:
-          context: .
-          dockerfile: src/Gateway/APIGateway/Dockerfile
+            context: .
+            dockerfile: src/Gateway/APIGateway/Dockerfile
+    ucrdausers.api:
+        image: ${DOCKER_REGISTRY-}ucrdausersapi
+        build:
+            context: .
+            dockerfile: src/Users of Administation/UCRDAUsers.API/Dockerfile

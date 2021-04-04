@@ -58,6 +58,18 @@ services:
             - ${HOME}/.aspnet/https:/root/.aspnet/https/
         ports:
             - "8003:80"
+    ucrdausers.api:
+        container_name: "ucrdausersapi"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - "UCRDAUserDatabaseSettings:ConnectionString=mongodb://rmirpdb:27017"
+        depends_on:
+            - rmirpdb
+        volumes:
+            - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+            - ${HOME}/.aspnet/https:/root/.aspnet/https/
+        ports:
+            - "8004:80"
     apigateway:
         container_name: apigateway
         environment:
@@ -67,20 +79,11 @@ services:
             - issue.api
             - approve.api
             - workassign.api
+            - ucrdausers.api
         volumes:
             - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
             - ${HOME}/.aspnet/https:/root/.aspnet/https/
         ports:
             - "7000:80"
-    ucrdausers.api:
-        container_name: "ucrdausersapi"
-        environment:
-            - ASPNETCORE_ENVIRONMENT=Development
-            - "UCRDADatabaseettings:ConnectionString=mongodb://rmirpdb:27017"
-        ports:
-            - "8004:80"
-        volumes:
-            - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
-            - ${HOME}/.aspnet/https:/root/.aspnet/https/
-        depends_on:
-            -rmirpdb
+    
+     

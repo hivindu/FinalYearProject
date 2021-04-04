@@ -50,7 +50,7 @@ namespace UCRDAUsers.API.Controllers
         [HttpGet("[action]/{nic}/{password}", Name = "GetUser")] // setting parameter length to 24 charactors and setting a name to this method because we can redirect request from one to another by calling this custom routename
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(UCRDAUser), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<UCRDAUser>> GetUserById(string nic,string password)
+        public async Task<ActionResult<UCRDAUser>> GetUserByCredentials(string nic,string password)
         {
             var user = await _repository.GetUserByCredentials(nic,password);
 

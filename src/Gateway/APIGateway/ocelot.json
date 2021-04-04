@@ -219,7 +219,43 @@
       ],
       "UpstreamPathTemplate": "/Approve/GetApprovalByIds/{uid}/{iid}",
       "UpstreamHttpMethod": [ "GET" ]
-    }
+    },
     // UCRDAUser API
+    {
+      "DownstreamPathTemplate": "/api/v1/UCRDAUser/",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ucrdausersapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/UCRDAUser/",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/UCRDAUser/{id}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ucrdausersapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/UCRDAUser/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/UCRDAUser/GetUserByCredentials/{nic}/{password}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ucrdausersapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/UCRDAUser/GetUserByCredentials/{nic}/{password}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
   ]
 }

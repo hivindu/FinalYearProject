@@ -109,6 +109,22 @@ namespace Issue.API.Controllers
             return Ok(issues);
         }
 
+        [Route("[action]/{area}")] 
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<Issues>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IEnumerable<Issues>>> GetApprovedIssuesByAdminArea(string area) // route name and pareameter must be same otherwise it won't match the value that we are passing
+        {
+            var issues = await _repository.GetApprovedIssuesByAdminArea(area);
+
+            if (issues == null)
+            {
+                _logger.LogError($"Issues With  administrative area: {area}, not found in current Contwxt.");
+                return NotFound();
+            }
+
+            return Ok(issues);
+        }
+
         [HttpPost]
         [ProducesResponseType(typeof(Issues), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Issues>> CreateUser([FromBody] Issues issue) //we are expecting http request and inside of request we expect product body and .net core will auto convert jason to object

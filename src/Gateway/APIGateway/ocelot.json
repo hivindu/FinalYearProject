@@ -122,6 +122,18 @@
       "UpstreamPathTemplate": "/Issue/GetIssueByType/{type}/{area}",
       "UpstreamHttpMethod": [ "GET" ]
     },
+    {
+      "DownstreamPathTemplate": "/api/v1/Issue/GetApprovedIssuesByAdminArea/{area}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "issueapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Issue/GetApprovedIssuesByAdminArea/{area}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
     // Workassign API
     {
       "DownstreamPathTemplate": "/api/v1/Work",

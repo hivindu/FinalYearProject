@@ -49,6 +49,11 @@ namespace Issue.API.Repositories
             return await _context.issues.Find<Issues>(p=> p.IssueType == type && p.AdminArea == area).ToListAsync();
         }
 
+        public async Task<IEnumerable<Issues>> GetApprovedIssuesByAdminArea(string area)
+        {
+            return await _context.issues.Find<Issues>(p => p.Status == "Approved" &&  p.AdminArea == area).ToListAsync();
+        }
+
         public async Task Create(Issues issue)
         {
              await _context.issues.InsertOneAsync(issue);
@@ -71,5 +76,6 @@ namespace Issue.API.Repositories
             return deleteResult.IsAcknowledged && deleteResult.DeletedCount > 0;
         }
 
+        
     }
 }

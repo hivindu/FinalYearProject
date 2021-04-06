@@ -18,9 +18,10 @@ namespace UCRDAUsers.API.Controllers
         private readonly IUCRDAUserRepository _repository;
         private readonly ILogger<UCRDAUserController> _logger;
 
-        public UCRDAUserController(IUCRDAUserRepository repository)
+        public UCRDAUserController(IUCRDAUserRepository repository, ILogger<UCRDAUserController> logger)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
+            _logger = logger ?? throw new ArgumentException(nameof(logger));
         }
 
         [HttpGet]

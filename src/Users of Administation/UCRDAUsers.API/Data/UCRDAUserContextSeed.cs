@@ -26,7 +26,7 @@ namespace UCRDAUsers.API.Data
                 {
                     Name ="Deshan Pathirana",
                     Password="Deshn123",
-                    LocationArea = "kOTTAWA",
+                    LocationArea = "Kottawa",
                     NIC="992022469v",
                     Type = 0,
                     Work = 0

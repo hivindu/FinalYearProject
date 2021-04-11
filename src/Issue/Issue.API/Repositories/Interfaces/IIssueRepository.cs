@@ -22,6 +22,8 @@ namespace Issue.API.Repositories.Interfaces
 
         Task<IEnumerable<Issues>> GetApprovedIssuesByAdminArea(string area);
 
+        Task<IEnumerable<Issues>> GetAssignedRDAIssues(string area);
+
         Task Create(Issues issue);
 
         Task<bool> Update(Issues issue);

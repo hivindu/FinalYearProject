@@ -54,6 +54,11 @@ namespace Issue.API.Repositories
             return await _context.issues.Find<Issues>(p => p.Status == "Approved" &&  p.AdminArea == area).ToListAsync();
         }
 
+        public async Task<IEnumerable<Issues>> GetAssignedRDAIssues(string area)
+        {
+            return await _context.issues.Find<Issues>(p => p.Status == "Assigned" && p.AdminArea == area ).ToListAsync();
+        }
+
         public async Task Create(Issues issue)
         {
              await _context.issues.InsertOneAsync(issue);

@@ -280,6 +280,18 @@
       ],
       "UpstreamPathTemplate": "/UCRDAUser/GetUserByCredentials/{nic}/{password}",
       "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/UCRDAUser/GetWorkersByTypeAndArea/{area}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ucrdausersapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/UCRDAUser/GetWorkersByTypeAndArea/{area}",
+      "UpstreamHttpMethod": [ "GET" ]
     }
   ]
 }

@@ -32,6 +32,11 @@ namespace UCRDAUsers.API.Repository
             return await _context.ucrdausers.Find(p => p.NIC == nic && p.Password == password).FirstOrDefaultAsync();
         }
 
+        public async Task<IEnumerable<UCRDAUser>> GetWorkersByTypeAndArea( string area)
+        {
+            return await _context.ucrdausers.Find(p => p.Type == 1 && p.LocationArea == area && p.Work==1).ToListAsync();
+        }
+
         public async Task Create(UCRDAUser user)
         {
             await _context.ucrdausers.InsertOneAsync(user);
@@ -53,5 +58,7 @@ namespace UCRDAUsers.API.Repository
             return deletedResult.IsAcknowledged && deletedResult.DeletedCount > 0;
 
         }
+
+        
     }
 }

@@ -42,6 +42,15 @@ namespace UCRDAUsers.API.Data
                 },
                 new UCRDAUser()
                 {
+                    Name ="Deshan Pathirana",
+                    Password="Deshn123",
+                    LocationArea = "Kottawa",
+                    NIC="992022467v",
+                    Type = 1,
+                    Work = 1
+                },
+                new UCRDAUser()
+                {
                     Name ="Deshan Perera",
                     Password="Deshn123",
                     LocationArea = "Horana",

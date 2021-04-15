@@ -14,6 +14,8 @@ namespace UCRDAUsers.API.Repository.Interface
 
         Task<UCRDAUser> GetUserByCredentials(string nic,string password);
 
+        Task<IEnumerable<UCRDAUser>> GetWorkersByTypeAndArea(string area);
+
         Task Create(UCRDAUser user);
 
         Task<bool> Update(UCRDAUser user);

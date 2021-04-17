@@ -55,6 +55,15 @@ namespace WorkAssign.API.Controllers
             return Ok(tasks);
         }
 
+        [Route("[action]/{area}")] // url comes like api/v1/catalog/GetProductByCategory/ we have to pass category name in here
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<Work>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IEnumerable<Work>>> GetTaskByArea(string area) // route name and pareameter must be same otherwise it won't match the value that we are passing
+        {
+            var tasks = await _repository.GetTaskByArea(area);
+            return Ok(tasks);
+        }
+
         [Route("[action]/{Uid}")] // url comes like api/v1/catalog/GetProductByCategory/ we have to pass category name in here
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Work>), (int)HttpStatusCode.OK)]

@@ -184,6 +184,18 @@
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
+      "DownstreamPathTemplate": "/api/v1/Work/GetTaskByArea/{area}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "workassignapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Work/GetTaskByArea/{area}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/v1/Work/GetTaskByUserId/{Uid}",
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [

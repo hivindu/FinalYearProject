@@ -16,6 +16,8 @@ namespace WorkAssign.API.Repositories.Interfaces
 
         Task<IEnumerable<Work>> GetTaskByDate(DateTime date);
 
+        Task<IEnumerable<Work>> GetTaskByArea(string area);
+
         Task Create(Work work);
 
         Task<bool> Update(Work work);

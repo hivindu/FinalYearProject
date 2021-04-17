@@ -28,7 +28,8 @@ namespace WorkAssign.API.Data
                     UserUd = "603b3dacf55952ec898db53b",
                     IssueId ="603b40f24e56386b416d2868",
                     AssignedDate = DateTime.Now.Date,
-                    Status = "In Progress"
+                    Status = "In Progress",
+                    Area = "Kottawa"
                 }
             };
         }

@@ -37,6 +37,11 @@ namespace WorkAssign.API.Repositories
             return await _context.task.Find<Work>(p => p.UserUd == userId).ToListAsync();
         }
 
+        public async Task<IEnumerable<Work>> GetTaskByArea(string area)
+        {
+            return await _context.task.Find<Work>(p => p.Area==area).ToListAsync();
+        }
+
         public async Task Create(Work work)
         {
             await _context.task.InsertOneAsync(work);
@@ -57,5 +62,7 @@ namespace WorkAssign.API.Repositories
 
             return deleteResult.IsAcknowledged && deleteResult.DeletedCount > 0;
         }
+
+        
     }
 }

@@ -29,7 +29,8 @@ namespace WorkAssign.API.Data
                     IssueId ="603b40f24e56386b416d2868",
                     AssignedDate = DateTime.Now.Date,
                     Status = "In Progress",
-                    Area = "Kottawa"
+                    Area = "Kottawa",
+                    WorkerName="saman"
                 }
             };
         }

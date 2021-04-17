@@ -18,5 +18,6 @@ namespace WorkAssign.API.Entities
         public DateTime AssignedDate { get; set; }
         public string Status { get; set; }
         public string Area { get; set; }
+        public string WorkerName { get; set; }
     }
 }

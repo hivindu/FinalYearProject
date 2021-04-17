@@ -32,9 +32,14 @@ namespace UCRDAUsers.API.Repository
             return await _context.ucrdausers.Find(p => p.NIC == nic && p.Password == password).FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<UCRDAUser>> GetWorkersByTypeAndArea( string area)
+        public async Task<IEnumerable<UCRDAUser>> GetWorkersByTypeAndArea(string area)
         {
             return await _context.ucrdausers.Find(p => p.Type == 1 && p.LocationArea == area && p.Work==1).ToListAsync();
+        }
+
+        public async Task<IEnumerable<UCRDAUser>> GetAllWorkersByTypeAndArea(string area, int work)
+        {
+            return await _context.ucrdausers.Find(p => p.LocationArea == area && p.Work == work).ToListAsync();
         }
 
         public async Task Create(UCRDAUser user)

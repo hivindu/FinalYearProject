@@ -292,6 +292,18 @@
       ],
       "UpstreamPathTemplate": "/UCRDAUser/GetWorkersByTypeAndArea/{area}",
       "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/UCRDAUser/GetAllWorkersByTypeAndArea/{area}/{work}",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ucrdausersapi",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/UCRDAUser/GetAllWorkersByTypeAndArea/{area}/{work}",
+      "UpstreamHttpMethod": [ "GET" ]
     }
   ]
 }

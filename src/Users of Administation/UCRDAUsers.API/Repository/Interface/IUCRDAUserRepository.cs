@@ -16,6 +16,8 @@ namespace UCRDAUsers.API.Repository.Interface
 
         Task<IEnumerable<UCRDAUser>> GetWorkersByTypeAndArea(string area);
 
+        Task<IEnumerable<UCRDAUser>> GetAllWorkersByTypeAndArea(string area, int work);
+
         Task Create(UCRDAUser user);
 
         Task<bool> Update(UCRDAUser user);

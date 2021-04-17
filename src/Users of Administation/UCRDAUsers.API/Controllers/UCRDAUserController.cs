@@ -56,6 +56,14 @@ namespace UCRDAUsers.API.Controllers
             return Ok(users);
         }
 
+        [HttpGet("[action]/{area}/{work}")]
+        [ProducesResponseType(typeof(IEnumerable<UCRDAUser>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IEnumerable<UCRDAUser>>> GetAllWorkersByTypeAndArea(string area,int work)
+        {
+            var users = await _repository.GetAllWorkersByTypeAndArea(area, work);
+            return Ok(users);
+        }
+
         [HttpGet("[action]/{nic}/{password}")] // setting parameter length to 24 charactors and setting a name to this method because we can redirect request from one to another by calling this custom routename
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(UCRDAUser), (int)HttpStatusCode.OK)]

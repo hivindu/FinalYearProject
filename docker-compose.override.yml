@@ -14,9 +14,7 @@ services:
         container_name: "userapi"
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
-            - "UserDatabaseSettings:ConnectionString=mongodb://rmirpdb:27017"
-        depends_on:
-            - rmirpdb
+            - "UserDatabaseSettings:ConnectionString=mongodb://root:hivi99Dasu@159.89.160.53:27017/?authSource=admin"
         volumes:
             - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
             - ${HOME}/.aspnet/https:/root/.aspnet/https/
@@ -26,9 +24,7 @@ services:
         container_name: "issueapi"
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
-            - "IssueDatabaseSettings:ConnectionString=mongodb://rmirpdb:27017"
-        depends_on:
-            - rmirpdb
+            - "IssueDatabaseSettings:ConnectionString=mongodb://root:hivi99Dasu@159.89.160.53:27017/?authSource=admin"
         volumes:
             - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
             - ${HOME}/.aspnet/https:/root/.aspnet/https/
@@ -38,9 +34,7 @@ services:
         container_name: "approveapi"
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
-            - "ApproveDatabaseSettings:ConnectionString=mongodb://rmirpdb:27017"
-        depends_on:
-            - rmirpdb
+            - "ApproveDatabaseSettings:ConnectionString=mongodb://root:hivi99Dasu@159.89.160.53:27017/?authSource=admin"
         volumes:
             - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
             - ${HOME}/.aspnet/https:/root/.aspnet/https/
@@ -50,9 +44,7 @@ services:
         container_name: "workassignapi"
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
-            - "WorkDatabaseSettings:ConnectionString=mongodb://rmirpdb:27017"
-        depends_on:
-            - rmirpdb
+            - "WorkDatabaseSettings:ConnectionString=mongodb://root:hivi99Dasu@159.89.160.53:27017/?authSource=admin"
         volumes:
             - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
             - ${HOME}/.aspnet/https:/root/.aspnet/https/
@@ -62,9 +54,7 @@ services:
         container_name: "ucrdausersapi"
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
-            - "UCRDAUserDatabaseSettings:ConnectionString=mongodb://rmirpdb:27017"
-        depends_on:
-            - rmirpdb
+            - "UCRDAUserDatabaseSettings:ConnectionString=mongodb://root:hivi99Dasu@159.89.160.53:27017/?authSource=admin"
         volumes:
             - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
             - ${HOME}/.aspnet/https:/root/.aspnet/https/

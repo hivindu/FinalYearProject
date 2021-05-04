@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGateway", "src\Gateway\A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users of Administation", "Users of Administation", "{ED535E67-6C29-4CEA-B337-71C3B7728385}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UCRDAUsers.API", "src\Users of Administation\UCRDAUsers.API\UCRDAUsers.API.csproj", "{D95C9126-3E6B-4D08-B32D-42CA7B942454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UCRDAUsers.API", "src\Users of Administation\UCRDAUsers.API\UCRDAUsers.API.csproj", "{D95C9126-3E6B-4D08-B32D-42CA7B942454}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -18,6 +18,7 @@ namespace User.API.Entities
         public string NIC { get; set; }
         public string Password { get; set; }
         public int PostalCode { get; set; }
+        public string Area { get; set; }
 
     }
 }

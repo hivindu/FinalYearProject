@@ -6,7 +6,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "userapi",
+          "Host": "hivi-99-userapi-sr3pw.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -18,7 +18,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "userapi",
+          "Host": "hivi-99-userapi-sr3pw.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -30,7 +30,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "userapi",
+          "Host": "hivi-99-userapi-sr3pw.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -42,7 +42,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "userapi",
+          "Host": "hivi-99-userapi-sr3pw.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -55,7 +55,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "issueapi",
+          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -67,7 +67,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "issueapi",
+          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -79,7 +79,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "issueapi",
+          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -91,7 +91,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "issueapi",
+          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -103,7 +103,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "issueapi",
+          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -115,7 +115,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "issueapi",
+          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -127,7 +127,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "issueapi",
+          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -139,7 +139,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "issueapi",
+          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -152,7 +152,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "workassignapi",
+          "Host": "hivi-99-workassignapi-9nqw9.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -164,7 +164,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "workassignapi",
+          "Host": "hivi-99-workassignapi-9nqw9.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -176,7 +176,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "workassignapi",
+          "Host": "hivi-99-workassignapi-9nqw9.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -188,7 +188,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "workassignapi",
+          "Host": "hivi-99-workassignapi-9nqw9.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -200,7 +200,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "workassignapi",
+          "Host": "hivi-99-workassignapi-9nqw9.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -213,7 +213,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "approveapi",
+          "Host": "hivi-99-approveapi-4s965.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -225,7 +225,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "approveapi",
+          "Host": "hivi-99-approveapi-4s965.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -237,7 +237,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "approveapi",
+          "Host": "hivi-99-approveapi-4s965.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -249,7 +249,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "approveapi",
+          "Host": "hivi-99-approveapi-4s965.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -262,7 +262,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "ucrdausersapi",
+          "Host": "hivi-99-ucrdausersapi-g9s46.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -274,7 +274,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "ucrdausersapi",
+          "Host": "hivi-99-ucrdausersapi-g9s46.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -286,7 +286,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "ucrdausersapi",
+          "Host": "hivi-99-ucrdausersapi-g9s46.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -298,7 +298,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "ucrdausersapi",
+          "Host": "hivi-99-ucrdausersapi-g9s46.ondigitalocean.app",
           "Port": "80"
         }
       ],
@@ -310,7 +310,7 @@
       "DownstreamPathScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "ucrdausersapi",
+          "Host": "hivi-99-ucrdausersapi-g9s46.ondigitalocean.app",
           "Port": "80"
         }
       ],

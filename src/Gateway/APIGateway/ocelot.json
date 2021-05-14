@@ -3,11 +3,11 @@
     // User API
     {
       "DownstreamPathTemplate": "/api/v1/User",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-userapi-sr3pw.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/User",
@@ -15,11 +15,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/User/{id}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-userapi-sr3pw.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/User/{id}",
@@ -27,11 +27,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/User/GetUserByNic/{nic}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-userapi-sr3pw.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/User/GetUserByNic/{nic}",
@@ -39,11 +39,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/User/GetUserByType/{type}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-userapi-sr3pw.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/User/GetUserByType/{type}",
@@ -52,11 +52,11 @@
     // Issue API
     {
       "DownstreamPathTemplate": "/api/v1/Issue",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
-          "Port": "80"
+          "Host": "hivi-99-issueapi-qttky.ondigitalocean.app",
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Issue",
@@ -64,11 +64,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Issue/{id}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
-          "Port": "80"
+          "Host": "hivi-99-issueapi-qttky.ondigitalocean.app",
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Issue/{id}",
@@ -76,11 +76,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Issue/GetIssueByAdminArea/{area}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
-          "Port": "80"
+          "Host": "hivi-99-issueapi-qttky.ondigitalocean.app",
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Issue/GetIssueByAdminArea/{area}",
@@ -88,11 +88,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Issue/GetIssueByDate/{date}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
-          "Port": "80"
+          "Host": "hivi-99-issueapi-qttky.ondigitalocean.app",
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Issue/GetIssueByDate/{date}",
@@ -100,11 +100,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Issue/GetIssueByRoad/{road}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
-          "Port": "80"
+          "Host": "hivi-99-issueapi-qttky.ondigitalocean.app",
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Issue/GetIssueByRoad/{road}",
@@ -112,11 +112,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Issue/GetIssueByType/{type}/{area}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
-          "Port": "80"
+          "Host": "hivi-99-issueapi-qttky.ondigitalocean.app",
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Issue/GetIssueByType/{type}/{area}",
@@ -124,11 +124,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Issue/GetApprovedIssuesByAdminArea/{area}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
-          "Port": "80"
+          "Host": "hivi-99-issueapi-qttky.ondigitalocean.app",
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Issue/GetApprovedIssuesByAdminArea/{area}",
@@ -136,11 +136,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Issue/GetAssignedIssuesRDA/{area}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "hivi-99-issueapi-z39rt.ondigitalocean.app",
-          "Port": "80"
+          "Host": "hivi-99-issueapi-qttky.ondigitalocean.app",
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Issue/GetAssignedIssuesRDA/{area}",
@@ -149,11 +149,11 @@
     // Workassign API
     {
       "DownstreamPathTemplate": "/api/v1/Work",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-workassignapi-9nqw9.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Work",
@@ -161,11 +161,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Work/{id}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-workassignapi-9nqw9.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Work/{id}",
@@ -173,11 +173,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Work/GetTaskByDate/{date}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-workassignapi-9nqw9.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Work/GetTaskByDate/{date}",
@@ -185,11 +185,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Work/GetTaskByArea/{area}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-workassignapi-9nqw9.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Work/GetTaskByArea/{area}",
@@ -197,11 +197,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Work/GetTaskByUserId/{Uid}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-workassignapi-9nqw9.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Work/GetTaskByUserId/{Uid}",
@@ -210,11 +210,11 @@
     // Approve API
     {
       "DownstreamPathTemplate": "/api/v1/Approve",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-approveapi-4s965.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Approve",
@@ -222,11 +222,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Approve/{id}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-approveapi-4s965.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Approve/{id}",
@@ -234,11 +234,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Approve/GetApprovalByUserId/{uid}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-approveapi-4s965.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Approve/GetApprovalByUserId/{uid}",
@@ -246,11 +246,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/Approve/GetApprovalByIds/{uid}/{iid}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-approveapi-4s965.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/Approve/GetApprovalByIds/{uid}/{iid}",
@@ -259,11 +259,11 @@
     // UCRDAUser API
     {
       "DownstreamPathTemplate": "/api/v1/UCRDAUser",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-ucrdausersapi-g9s46.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/UCRDAUser",
@@ -271,11 +271,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/UCRDAUser/{id}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-ucrdausersapi-g9s46.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/UCRDAUser/{id}",
@@ -283,11 +283,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/UCRDAUser/GetUserByCredentials/{nic}/{password}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-ucrdausersapi-g9s46.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/UCRDAUser/GetUserByCredentials/{nic}/{password}",
@@ -295,11 +295,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/UCRDAUser/GetWorkersByTypeAndArea/{area}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-ucrdausersapi-g9s46.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/UCRDAUser/GetWorkersByTypeAndArea/{area}",
@@ -307,11 +307,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/v1/UCRDAUser/GetAllWorkersByTypeAndArea/{area}/{work}",
-      "DownstreamPathScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "hivi-99-ucrdausersapi-g9s46.ondigitalocean.app",
-          "Port": "80"
+          "Port": "443"
         }
       ],
       "UpstreamPathTemplate": "/UCRDAUser/GetAllWorkersByTypeAndArea/{area}/{work}",

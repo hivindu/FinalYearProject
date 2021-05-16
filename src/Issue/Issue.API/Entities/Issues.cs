@@ -22,5 +22,7 @@ namespace Issue.API.Entities
         public string RoadType { get; set; }
         public int IssueType { get; set; }
         public string AdminArea { get; set; }
+        public int Count { get; set; }
+        public string UID { get; set; }
     }
 }

@@ -134,7 +134,23 @@ namespace Issue.API.Controllers
 
             if (issues == null)
             {
-                _logger.LogError($"Issues With  administrative area: {area}, not found in current Contwxt.");
+                _logger.LogError($"Issues With  administrative area: {area}, not found in current Context.");
+                return NotFound();
+            }
+
+            return Ok(issues);
+        }
+
+        [Route("[action]/{uid}")]
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<Issues>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IEnumerable<Issues>>> GetIssuesByUser(string uid) 
+        {
+            var issues = await _repository.GetIssueByUserId(uid);
+
+            if (issues == null)
+            {
+                _logger.LogError($"Issues With  User Id: {uid}, not found in current Context.");
                 return NotFound();
             }
 

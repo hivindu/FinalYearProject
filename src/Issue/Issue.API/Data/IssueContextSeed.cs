@@ -35,7 +35,8 @@ namespace Issue.API.Data
                     Date = "2021/12/02" ,
                     RoadType ="NoramlRoad",
                     IssueType = 1,
-                    AdminArea = "Kottawa"
+                    AdminArea = "Kottawa",
+                    Count=0
                },
                new Issues()
                {
@@ -48,7 +49,8 @@ namespace Issue.API.Data
                     Date = "2021/12/02" ,
                     RoadType ="NoramlRoad",
                     IssueType = 1,
-                    AdminArea = "Kottawa"
+                    AdminArea = "Kottawa",
+                    Count=0
                },
             };
         }

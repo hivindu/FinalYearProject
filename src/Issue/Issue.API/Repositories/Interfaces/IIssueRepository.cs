@@ -20,6 +20,8 @@ namespace Issue.API.Repositories.Interfaces
 
         Task<IEnumerable<Issues>> GetIssueByAdminArea(string area);
 
+        Task<IEnumerable<Issues>> GetIssueByUserId(string Uid);
+
         Task<IEnumerable<Issues>> GetApprovedIssuesByAdminArea(string area);
 
         Task<IEnumerable<Issues>> GetAssignedRDAIssues(string area);

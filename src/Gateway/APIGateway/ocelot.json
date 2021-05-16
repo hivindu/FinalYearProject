@@ -146,6 +146,18 @@
       "UpstreamPathTemplate": "/Issue/GetAssignedIssuesRDA/{area}",
       "UpstreamHttpMethod": [ "GET" ]
     },
+    {
+      "DownstreamPathTemplate": "/api/v1/Issue/GetIssuesByUser/{uid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hivi-99-issueapi-qttky.ondigitalocean.app",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/Issue/GetIssuesByUser/{uid}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
     // Workassign API
     {
       "DownstreamPathTemplate": "/api/v1/Work",

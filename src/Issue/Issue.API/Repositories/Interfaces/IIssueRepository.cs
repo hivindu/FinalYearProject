@@ -28,6 +28,8 @@ namespace Issue.API.Repositories.Interfaces
 
         Task Create(Issues issue);
 
+        Task<bool> PatchIssue(string id);
+
         Task<bool> Update(Issues issue);
 
         Task<bool> Delete(string id);

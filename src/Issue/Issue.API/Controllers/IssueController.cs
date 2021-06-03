@@ -174,6 +174,13 @@ namespace Issue.API.Controllers
             return Ok(await _repository.Update(issue));
         }
 
+        [HttpPut("{id}")]
+        [ProducesResponseType(typeof(Issues), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> UpdateStatus( string id) //we are expecting http request and inside of request we expect product body and .net core will auto convert jason to object
+        {
+            return Ok(await _repository.PatchIssue(id));
+        }
+
         [HttpDelete("{id:length(24)}")]
         [ProducesResponseType(typeof(Issues), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeleteUserById(string id)

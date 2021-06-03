@@ -72,7 +72,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Issue/{id}",
-      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "DELETE" ,"PUT" ]
     },
     {
       "DownstreamPathTemplate": "/api/v1/Issue/GetIssueByAdminArea/{area}",

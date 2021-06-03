@@ -30,13 +30,12 @@ namespace Issue.API.Data
                     Lat = 6.845149,
                     Long = 79.942416,
                     PostalCode = 10230 ,
-                    Province = "Western Province",
+                    Location = "Western Province",
                     Status = "Approved",
                     Date = "2021/12/02" ,
                     RoadType ="NoramlRoad",
                     IssueType = 1,
-                    AdminArea = "Kottawa",
-                    Count=0
+                    AdminArea = "Kottawa"
                },
                new Issues()
                {
@@ -44,13 +43,12 @@ namespace Issue.API.Data
                     Lat = 6.860403,
                     Long = 79.977907,
                     PostalCode = 10235 ,
-                    Province = "Western Province",
+                    Location = "Western Province",
                     Status = "Working",
                     Date = "2021/12/02" ,
                     RoadType ="NoramlRoad",
                     IssueType = 1,
-                    AdminArea = "Kottawa",
-                    Count=0
+                    AdminArea = "Kottawa"
                },
             };
         }

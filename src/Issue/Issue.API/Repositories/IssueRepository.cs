@@ -77,6 +77,27 @@ namespace Issue.API.Repositories
             return UpdateResult.IsAcknowledged && UpdateResult.ModifiedCount > 0;
         }
 
+        public async Task<bool> PatchIssue(string id)
+        {
+            var filter = Builders<Issues>.Filter.Eq(s => s.Id, id);
+            var update = Builders<Issues>.Update
+                            .Set(s => s.Status, "Approved");
+
+            try
+            {
+                UpdateResult actionResult
+                    = await _context.issues.UpdateOneAsync(filter, update);
+
+                return actionResult.IsAcknowledged
+                    && actionResult.ModifiedCount > 0;
+            }
+            catch (Exception ex)
+            {
+                // log or manage the exception
+                throw ex;
+            }
+        }
+
         public async Task<bool> Delete(string id)
         {
 

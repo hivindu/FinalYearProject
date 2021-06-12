@@ -40,4 +40,4 @@
 Another way we can run this application by pulling docker images from my docker hub repository links that i have provided in above.
 
 
-**Thank You & Happy Coding :smiley:!**
+**Happy Coding :smiley:!**
